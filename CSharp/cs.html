@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>C#</title>
+    <link rel="stylesheet" href="cs.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="https://cdn-icons-png.flaticon.com/512/6132/6132221.png" alt="C# Logo" class="logo">
+        <h1>C#</h1>
+
+        <!-- rechte Gruppe: Links + Hamburger -->
+        <nav class="hyperlinks">
+            <a href="#start">Start</a>
+            <a href="#grundlagen">Grundlagen</a>
+            <a href="#fortgeschritten">Fortgeschritten</a>
+        </nav>
+
+        <div id="hamburger" class="hamburger" aria-label="Menü" role="button">
+            <span></span><span></span><span></span>
+        </div>
+        <nav class="menu" id="menu">
+            <ul>
+                <li><a href="#start">Start</a></li>
+
+                <li class="has-submenu">
+                    <a href="#grundlagen">Grundlagen</a>
+                    <ul class="submenu">
+                        <li><a href="#erstes-Programm">Erstes Programm</a></li>
+                        <li><a href="#grundsyntax">Grundsyntax</a></li>
+                        <li><a href="#kontrollstrukturen">Kontrollstrukturen</a></li>
+                        <li><a href="#methoden">Methoden</a></li>
+                        <li><a href="klassen&objekte">Klassen & Objekte</a></li>
+                        <li><a href="#arrays&listen">Arrays & Listen</a></li>
+                        <li><a href="#fehlerbehandlung">Fehlerbehandlung</a></li>
+                        <li><a href="#namespace&using">Namespace & using</a></li>
+                    </ul>
+                </li>
+
+                <li class="has-submenu">
+                    <a href="#fortgeschritten">Fortgeschritten</a>
+                    <ul class="submenu">
+                        <li><a href="#objkto-design">Objektorientierte Programmierung</a></li>
+                        <li><a href="#generics">Generics</a></li>
+                        <li><a href="#delegates&events&lambdas">Delegates, Events und Lambdas</a></li>
+                        <li><a href="#async-programmierung">Asynchrone Programmierung</a></li>
+                        <li><a href="#linq">LINQ</a></li>
+                        <li><a href="#sammlungen&datenstrukturen">Sammlungen & Datenstrukturen</a></li>
+                        <li><a href="#speicherverwaltung&garbage-collection">Speicherverwaltung & Garbage Collection</a>
+                        </li>
+                        <li><a href="#design-patterns">Design Patterns</a></li>
+                        <li><a href="#reflection&attributes">Reflection & Attributes</a></li>
+                        <li><a href="#dependency-injection">Dependency Injection</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main">
+
+        <div class="start" id="start">
+            <h2>Start</h2>
+            <hr>
+            <div>
+                <h3>Was ist C# ?</h3>
+                <p>
+                    C# ist eine objektorientierte Programmiersprache aus der .NET Plattform von Microsoft.
+                    Sie ist eine der Hauptsprachen für Windows- , Web- , Cloud- und Spiele-Anwendungen.
+                    Sie ist im Jahr 2000 erschienen und läuft auf dem .NET Framework oder .NET (Core).
+                    Ihre Syntax ist ähnlich wie bei C, C++ oder Java.
+            </div>
+            <div>
+                <h3>Anwendungsgebiete</h3>
+                <p>
+                <ul>
+                    <li>Desktop Apps</li>
+                    <li>Web-Anwendungen</li>
+                    <li>Spieleentwicklung (mit Unity)</li>
+                    <li>Cloud-Services</li>
+                    <li>Mobile Apps</li>
+                </ul>
+                </p>
+            </div>
+            <div>
+                <h3>Wichtige Merkmale</h3>
+                <p>
+                <ul>
+                    <li>Objektorientiert : nutzt z.B. Klassen, Vererbung und Polimorphie</li>
+                    <li>Typensicher : erkennt viele Fehler bereits während des kompilierens</li>
+                    <li>Garbage Collection : automatisches Sicherheitsmanegement</li>
+                    <li>Async / Await : einfache nebenläufige Programmierung</li>
+                    <li>Cross-Plattform : läuft mit .NET auf Windows, Linux und macOS</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+
+        <div class="grundlagen" id="grundlagen">
+            <h2>Grundlagen</h2>
+            <hr>
+            <div id="erstes-Programm">
+                <h3>Erstes Programm</h3>
+                <p>
+                <pre><code class="language-csharp">
+using System;
+
+class Program
+{
+    static void main()
+    {
+        Console.WriteLine("Hallo Welt!")
+    }
+}
+                    </code></pre>
+                <p>
+                    Dieses Programm ist das Hallo Welt Programm, welches in fast allen Sprachen das erstes-Programm
+                    ist, was man codet. Dieses Hallo Welt Programm gibt in der Console folgendes aus :
+                <p>Hallo Welt!</p>
+                </p>
+                <h4>Erklärung</h4>
+                <p>
+                <ul>
+                    <li>using System → Importiert den System-Namespace</li>
+                    <li>class Program → Definiert eine Klasse mit dem Namen Program</li>
+                    <li>static void main() → Einstiegspunkt des Programms / Beginn der Ausführung</li>
+                    <li>Console.WriteLine("Hallo Welt!") → Gibt den Text : Hallo Welt! in der Konsole aus</li>
+                </ul>
+                </p>
+                </p>
+            </div>
+            <div id="grundsyntax">
+                <h3>Grundsyntax und Datentypen</h3>
+                <p>
+                <h4>Aufbau eines C# Programms</h4>
+                <p>
+                <ul>
+                    <li>mindestens eine Klasse</li>
+                    <li>midestens eine Main Methode</li>
+                </ul>
+                <pre><code class="language-csharp">
+using System;
+
+class Program
+{
+    static void main()
+    {
+        Code
+    }
+}
+                        </code></pre>
+                </p>
+                <h4>Variablen</h4>
+                <p>
+                <pre><code class="language-csharp">
+int alter = 25;
+string name = "Anna";
+double gehalt = 3500.50;
+bool istVolljährig = true;
+                        </code></pre>
+                <p>
+                <ul>
+                    <li>int = Ganze Zahl</li>
+                    <li>string = Text / Zeichenkette</li>
+                    <li>double = Gleitkommazahl</li>
+                    <li>bool = Wahrheitswert (true / false)</li>
+                    <li>float = einfache Kommazahl</li>
+                    <li>decimal = sehr genaue Kommazahl</li>
+                    <li>char = einzelnes Zeichen</li>
+                    <li>byte = 8-Bit-Zahl</li>
+                </ul>
+                </p>
+                <p class="Merkkasten">
+                    Merke: <br>
+                    int, string, double, ... sind Datentypen! <br>
+                    Sie bestimmen welche Art von Wert eine Variable annehmen kann!
+                </p>
+                <p>
+                <pre><code class="language-csharp">
+Bildung einer Variable:
+datentyp name = wert;
+                            </code></pre>
+                </p>
+                <p>
+                    Variablen sind also Speicherplätze für Werte verschiedener Art.
+                    Diese Art der Werte wird durch einen Datentypen vor dem Variablen-Namen
+                    bestimmt. Nach dem Namen kommt der Zuweisungsoperator "=" und dann der
+                    Wert der Variable. Eine Variable funktioniert nur, wenn der Wert zum
+                    vorher angegebenen Datentyp passt. So würde " int name = "Anna" " nicht
+                    funktionieren, da dass Programm eine Ganze Zahl erwartet und einen Text
+                    bekommt.
+                </p>
+                </p>
+                <h4>Konstanten verwenden</h4>
+                <p>
+                    Eine Konstante ist ähnlich wie eine Variable ein gespeicherter Wert.
+                    Jedoch sind Konstanten schon im Code festgelegt und können während
+                    der Ausführung des Programms oder später im Code keinen anderen Wert
+                    zugewiesen bekommen.
+                </p>
+                <p>
+                <pre><code class="language-csharp">
+const double Pi = 3.14159265359;
+const int MaxAlter = 120;
+const string Begrüßung = "Wilkommen!";
+                        </code></pre>
+                </p>
+                <p class="Merkkasten">
+                    Merke: <br>
+                    Bei Variablen, Constanten und generell überall im Code gilt, dass
+                    ein Komma immer ein Punkt "." ist. Speichert man Nachkomma-Zahlen
+                    mit einem Komma "," könnte das Probleme und Fehlermeldungen oder ungewollt
+                    Teile im Code ausführen. <br>
+                    Bsp.: <br>
+                    if pi < 3.5 {} → führt den Code nur aus, wenn Pi kleiner als 3,5 ist <br>
+                        if pi < 3,5 {} → führt den Code nur aus, wenn Pi kleiner als 35 ist </p>
+                            <p>
+                            <pre><code class="language-csharp">
+Bildung einer Konstanten: 
+const datentyp name = wert;
+                        </code></pre>
+                </p>
+                <p>
+                    Kostanten akzeptieren außerdem nur einfache Datentypen wie
+                    int, double, char, string, bool, enum, usw.
+                </p>
+                <p>
+                <h4>Konstanten in Klassen</h4>
+                <p>
+                <pre><code class="language-csharp">
+Deklarieren einer Konstanten:
+class Mathe
+{
+    public const double Pi = 3.14159
+}
+                            </code></pre>
+                <pre><code class="language-csharp">
+Verwenden der Deklarierten Konstanten:
+double umfang = 2 * Mathe.Pi * 5;
+Console.WriteLine(umfang);
+                            </code></pre>
+                </p>
+                </p>
+                <br>
+                <h4>Operatoren</h4>
+                <p>
+                    Es gibt 9 verschiedene Arten von Operatoren:
+                <ul>
+                    <li>Arithmetische Operatoren</li>
+                    <li>Vergleichsoperatoren</li>
+                    <li>Logische Operatoren</li>
+                    <li>Zuweisungsoperatoren</li>
+                    <li>Inkrement- und Dekrementoperatoren</li>
+                    <li>Bedingungsoperator</li>
+                    <li>Typumwandlungsoperatoren</li>
+                    <li>Null-Operatoren</li>
+                    <li>Bitweise Operatoren (Fortgeschritten)</li>
+                </ul>
+                </p>
+                <h4>Arithmetische Operatoren</h4>
+                <p>
+                <table class="OperatorTabelle-I">
+                    <thead>
+                        <tr>
+                            <th>Operator</th>
+                            <th>Bedeutung</th>
+                            <th>Beispiel</th>
+                            <th>Ergebnis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>+</td>
+                            <td>Addition</td>
+                            <td>5 + 3</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>Subtraktion</td>
+                            <td>10 - 4</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>*</td>
+                            <td>Multiplikation</td>
+                            <td>6 * 7</td>
+                            <td>42</td>
+                        </tr>
+                        <tr>
+                            <td>/</td>
+                            <td>Division</td>
+                            <td>10 / 2</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>%</td>
+                            <td>Modulo (Rest)</td>
+                            <td>10 % 3</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <pre><code class="language-csharp">
+int a = 10;
+int b = 3;
+int summe = a + b; // Ausgabe : "13" , denn 10 + 3 = 13
+int rest = a % b; // Ausgabe : "1" , denn 10 / 3 = 3 Rest:1
+double Kommazahl= a / (double)b; // Ausgabe : 3,333333335 
+                        </code></pre>
+                <p>
+                    Man kann also mit dieser Art von Operatoren im
+                    Programm rechnen.
+                </p>
+                </p>
+                <h4>Vergleichsoperatoren</h4>
+                <p>
+                <table class="OperatorTabelle-I">
+                    <thead>
+                        <tr>
+                            <th>Operator</th>
+                            <th>Bedeutung</th>
+                            <th>Beispiel</th>
+                            <th>Ergebnis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>==</td>
+                            <td>Gleichheit</td>
+                            <td>5 == 5</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>!=</td>
+                            <td>Ungleichheit</td>
+                            <td>5 != 3</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td>Größer als</td>
+                            <td>5 > 3</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                << /td>
+                            <td>Kleiner als</td>
+                            <td>2 < 5</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>>=</td>
+                            <td>Größer oder Gleich</td>
+                            <td>5 >= 5</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <=< /td>
+                            <td>Kleiner oder Gleich</td>
+                            <td>3 <= 7</td>
+                            <td>true</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    Mit Vergleichsoperatoren kann man also prüfen, ob etwas
+                    Gleich, Größer, Ungleich oder Gleich ist.
+                </p>
+                </p>
+                <h4>Logische Operatoren</h4>
+                <p>
+                <table class="OperatorTabelle-I">
+                    <thead>
+                        <tr>
+                            <th>Operator</th>
+                            <th>Bedeutung</th>
+                            <th>Beispiel</th>
+                            <th>Ergebnis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>&&</td>
+                            <td>UND</td>
+                            <td>true && false</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>`</td>
+                            <td></td>
+                            <td>`</td>
+                            <td>ODER</td>
+                        </tr>
+                        <tr>
+                            <td>!</td>
+                            <td>NICHT</td>
+                            <td>!true</td>
+                            <td>false</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    Logische Operatoren verknüpfen boolesche Werte!
+                </p>
+                </p>
+                <h4>Zuweisungsoperatoren</h4>
+                <p>
+                <table class="OperatorTabelle-I">
+                    <thead>
+                        <tr>
+                            <th>Operator</th>
+                            <th>Bedeutung</th>
+                            <th>Beispiel</th>
+                            <th>Ergebnis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>=</td>
+                            <td>Zuweisung</td>
+                            <td>x = 5</td>
+                            <td>x ist 5</td>
+                        </tr>
+                        <tr>
+                            <td>+=</td>
+                            <td>Addire und weise zu</td>
+                            <td>x += 3</td>
+                            <td>x = x + 3</td>
+                        </tr>
+                        <tr>
+                            <td>-=</td>
+                            <td>Subtrahire und weise zu</td>
+                            <td>x -= 2</td>
+                            <td>x = x - 2</td>
+                        </tr>
+                        <tr>
+                            <td>*=</td>
+                            <td>Multipliziere und weise zu</td>
+                            <td>x *= 4</td>
+                            <td>x = x * 4</td>
+                        </tr>
+                        <tr>
+                            <td>/=</td>
+                            <td>Dividiere und weise zu</td>
+                            <td>x /= 2</td>
+                            <td>x = x / 2</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    Zuweisungsoperatoren weisen also Variablen, etc. einen Wert zu. <br>
+                    Diese werden aoch oft mit einer Operation(+, -, *, /) kombiniert.
+                </p>
+                </p>
+                <h4>Inkrement und Dekrementoperatoren</h4>
+                <p>
+                <table class="OperatorTabelle-I">
+                    <thead>
+                        <tr>
+                            <th>Operator</th>
+                            <th>Bedeutung</th>
+                            <th>Beispiel</th>
+                            <th>Ergebnis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>++</td>
+                            <td>Erhöhen</td>
+                            <td>x++</td>
+                            <td>Nachher x = x + 1</td>
+                        </tr>
+                        <tr>
+                            <td>--</td>
+                            <td>Verringern</td>
+                            <td>x--</td>
+                            <td>Nachher x = x - 1</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    Diese Art von Operatoren Erhöhen oder Verringern also den Wert der Variable
+                    um 1.
+                </p>
+                </p>
+                <h3 id="kontrollstrukturen">Kontrollstrukturen</h3>
+                <p>
+                <p>
+                    Es gibt 4 Verschiedene Arten von Kontrollstrukturen:
+                <ul>
+                    <li>Für Entscheidungen: if, else if, else</li>
+                    <li>Zum Vergleichen von Mustern: switch</li>
+                    <li>Schleifen: for, while, do-while, foreach</li>
+                    <li>Zum Schleifen kontrollieren: break, continue</li>
+                </ul>
+                </p>
+                <h4>If, else if, else</h4>
+                <p>
+                <pre><code class="language-csharp">
+int alter = 17;
+if (alter >= 18)
+{
+    Console.WriteLine("Volljährig!")
+}
+else if (alter >= 16)
+{
+    Console.WriteLine("Fast Volljährig!")
+}
+else 
+{
+    Console.WriteLine("Noch zu Jung")
+}
+                        </code></pre>
+                <p>
+                    Je nachdem ob die Bedingung true oder false ergibt, wählt das Programm einen anderen Weg.
+                </p>
+                </p>
+                <h4>Switch</h4>
+                <p>
+                <pre><code class="language-csharp">
+
+                    </code></pre>
+                </p>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+
+
+
+    </footer>
+
+    <script src="cs.js"></script>
+</body>
+
+</html>

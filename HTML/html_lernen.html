@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Einführung</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" class="logo">
+  <h1 class="HTML">HTML</h1>
+
+  <nav class="Header">
+    <a href="#was-ist-html">Über HTML</a>
+    <a href="#struktur">Struktur</a>
+    <a href="#attribute">Attribute</a>
+    <a href="#tags">Tags</a>
+  </nav>
+
+  <div class="menu">☰</div>
+
+  <div class="mobile-menu hidden">
+    <a href="#was-ist-html">Über HTML</a>
+    <a href="#struktur">Struktur</a>
+    <a href="#attribute">Attribute</a>
+    <a href="#tags">Tags</a>
+  </div>
+</header>
+
+  <main>
+    <section id="was-ist-html">
+      <h2>Was ist HTML?</h2>
+      <p>HTML steht für HyperText Markup Language und ist die Sprache, mit der Webseiten aufgebaut werden. Sie beschreibt, wie Inhalte im Browser dargestellt werden.</p>
+      <h2>Wofür benutze ich HTML?</h2>
+      <p>Html wird verwendet, um Webseiten zu erstellen und deren Inhalte zu strukturieren. Damit legt man fest, welche Elemente wie Texte, Bilder, Links oder Listen auf einer Seite erscheinen. Es bildet die Grundlage jeder Website und sorgt dafür, dass Browser den Inhalt richtig darstellen können.</p>
+      <h2>Wie installiere ich notwendige Programme?</h2>
+      <p>Man benutzt für HTML oft ein Programm wie Visuel Code Studios oder Notepad++. Diese Programme sind kostenlos und können einfach aus dem Internet heruntergeladen und installiert werden. Hier ist ein Link zum Dowload von Visual Code Studio <a href="https://code.visualstudio.com/download">Klick mich zum download</a>.</p>
+    </section>
+
+    <section id="struktur">
+      <h2>Struktur einer HTML-Datei</h2>
+      <div class="code"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="de"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Seitentitel&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hallo Welt&lt;/h1&gt;
+  &lt;p&gt;Dies ist ein Absatz.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+      </code></div>
+       <div class="erklärung">
+        <h3>Erklärung der einzelnen Zeilen:</h3>
+        <ul>
+          <li><strong>&lt;!DOCTYPE html&gt;</strong> – sagt dem Browser, dass es sich um ein HTML-Dokument handelt.</li>
+          <li><strong>&lt;html lang="de"&gt;</strong> – Beginn der HTML-Seite; das Attribut <em>lang="de"</em> zeigt, dass die Seite auf Deutsch ist.</li>
+          <li><strong>&lt;head&gt;</strong> – enthält Informationen über die Seite (z. B. Titel, Zeichensatz, Verknüpfungen).</li>
+          <li><strong>&lt;meta charset="UTF-8"&gt;</strong> – legt fest, dass Sonderzeichen wie Umlaute korrekt dargestellt werden.</li>
+          <li><strong>&lt;title&gt;</strong> – bestimmt den Titel, der im Browser-Tab angezeigt wird.</li>
+          <li><strong>&lt;body&gt;</strong> – hier steht der sichtbare Inhalt der Webseite.</li>
+          <li><strong>&lt;h1&gt;</strong> – eine große Überschrift, in diesem Beispiel „Hallo Welt“.</li>
+          <li><strong>&lt;/body&gt; &lt;/html&gt;</strong> – das / bedeutet, dass man etwas schließt.</li>
+        </ul>
+      </div>
+    </section>
+    <section>
+  <section id="attribute">
+  <h2>HTML-Attribute</h2>
+  <div class="erklärung">
+    <h3>Was sind Attribute?</h3>
+    <p>
+      Attribute sind zusätzliche Informationen, die HTML-Tags mehr Details geben.
+      Sie werden innerhalb des öffnenden Tags hinzugefügt und bestehen aus einem Namen
+      und einem Wert.
+    </p>
+    <h3>Beispiele für Attribute:</h3>
+    <ul>
+      <li>
+        <strong>href</strong> – wird im <code>&lt;a&gt;</code>-Tag verwendet, um die URL eines Links anzugeben.
+        <div class="beispiel-box">
+          Beispiel: <code>&lt;a href="https://www.example.com"&gt;Besuche Seite&lt;/a&gt;</code>
+        </div>
+      </li>
+      <li>
+        <strong>src</strong> – wird im <code>&lt;img&gt;</code>-Tag verwendet, um die Quelle eines Bildes anzugeben.
+        <div class="beispiel-box">
+          Beispiel: <code>&lt;img src="bild.jpg" alt="Ein Beispielbild"&gt;</code>
+        </div>
+      </li>
+      <li>
+        <strong>class</strong> – wird im <code>&lt;img&gt;</code>-Tag verwendet, um eine alternative Textbeschreibung für ein Bild bereitzustellen.
+        <div class="beispiel-box">
+          Beispiel: <code>&lt;p&gt; class="highlight" &gt ist ein Satz mit einer CSS-Klasse &lt;/p&gt;</code>
+          <br>
+          <br>
+        </div>
+        <strong>id</strong> – Gibt eine eindeutige ID für das Element an.
+        <div class="beispiel-box">
+          Beispiel: <code>&lt;p id="einleitung"&gt;Das ist ein Satz mit einer eindeutigen ID.&lt;/p&gt;</code>
+        </div>
+        <strong>lang</strong> – wird im <code>&lt;img&gt;</code>-Tag verwendet, um eine alternative Textbeschreibung für ein Bild bereitzustellen.
+        <div class="beispiel-box">
+          Beispiel: <code>&lt;img src="logo.png" alt="HTML Bild"&gt;</code>
+        </div>
+        <strong>alt</strong> – wird im <code>&lt;img&gt;</code>-Tag verwendet, um eine alternative Textbeschreibung für ein Bild bereitzustellen.
+        <div class="beispiel-box">
+          Beispiel: <code>&lt;img src="logo.png" alt="HTML Bild"&gt;</code>
+        </div>
+      </li>
+      <li>
+        <strong>style</strong> – ermöglicht das Hinzufügen von CSS-Stilen direkt zu einem HTML-Element.
+        <div class="beispiel-box">
+          Beispiel: <code>&lt;p style="color: blue;"&gt;Blauer Text&lt;/p&gt;</code>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<section>
+  <h2>HTML-Tags</h2>
+  <div class="erklärung">
+    <h3>Alle HTML-Tags:</h3>
+    <div class="sort-buttons">
+      <button id="sort-alpha">Nach Alphabet sortieren</button>
+      <button id="sort-priority">Nach Wichtigkeit sortieren</button>
+    </div>
+
+    <ul id="tag-list" id="tags">
+      <li data-priority="1"><strong>&lt;!DOCTYPE&gt;</strong> – Definiert den Dokumenttyp (HTML-Version)</li>
+      <li data-priority="2"><strong>&lt;html&gt;</strong> – Wurzelelement des HTML-Dokuments</li>
+      <li data-priority="3"><strong>&lt;head&gt;</strong> – Enthält Metadaten über das Dokument</li>
+      <li data-priority="4"><strong>&lt;title&gt;</strong> – Titel der Webseite (im Browser-Tab)</li>
+      <li data-priority="5"><strong>&lt;body&gt;</strong> – Sichtbarer Hauptinhalt der Seite</li>
+      <li data-priority="6"><strong>&lt;h1&gt;–&lt;h6&gt;</strong> – Überschriften verschiedener Ebenen</li>
+      <li data-priority="7"><strong>&lt;p&gt;</strong> – Absatz</li>
+      <li data-priority="8"><strong>&lt;a&gt;</strong> – Hyperlink</li>
+      <li data-priority="9"><strong>&lt;img&gt;</strong> – Bild</li>
+      <li data-priority="10"><strong>&lt;div&gt;</strong> – Allgemeiner Container für Inhalte</li>
+      <li data-priority="11"><strong>&lt;span&gt;</strong> – Inline-Container für Text</li>
+      <li data-priority="12"><strong>&lt;br&gt;</strong> – Zeilenumbruch</li>
+      <li data-priority="13"><strong>&lt;hr&gt;</strong> – Horizontale Linie / Trenner</li>
+      <li data-priority="14"><strong>&lt;header&gt;</strong> – Kopfbereich eines Abschnitts</li>
+      <li data-priority="15"><strong>&lt;footer&gt;</strong> – Fußbereich eines Abschnitts</li>
+      <li data-priority="16"><strong>&lt;nav&gt;</strong> – Navigationsbereich</li>
+      <li data-priority="17"><strong>&lt;main&gt;</strong> – Hauptinhalt der Seite</li>
+      <li data-priority="18"><strong>&lt;section&gt;</strong> – Thematischer Abschnitt</li>
+      <li data-priority="19"><strong>&lt;article&gt;</strong> – Selbstständiger Artikel</li>
+      <li data-priority="20"><strong>&lt;aside&gt;</strong> – Seitenleiste oder ergänzende Inhalte</li>
+      <li data-priority="21"><strong>&lt;form&gt;</strong> – Formular</li>
+      <li data-priority="22"><strong>&lt;input&gt;</strong> – Eingabefeld</li>
+      <li data-priority="23"><strong>&lt;button&gt;</strong> – Schaltfläche</li>
+      <li data-priority="24"><strong>&lt;label&gt;</strong> – Beschriftung für ein Formularfeld</li>
+      <li data-priority="25"><strong>&lt;select&gt;</strong> – Dropdown-Menü</li>
+      <li data-priority="26"><strong>&lt;option&gt;</strong> – Eintrag in einer Auswahlliste</li>
+      <li data-priority="27"><strong>&lt;textarea&gt;</strong> – Mehrzeiliges Eingabefeld</li>
+      <li data-priority="28"><strong>&lt;table&gt;</strong> – Tabelle</li>
+      <li data-priority="29"><strong>&lt;tr&gt;</strong> – Tabellenzeile</li>
+      <li data-priority="30"><strong>&lt;td&gt;</strong> – Tabellenzelle</li>
+      <li data-priority="31"><strong>&lt;th&gt;</strong> – Tabellenkopfzelle</li>
+      <li data-priority="32"><strong>&lt;thead&gt;</strong> – Tabellenkopf</li>
+      <li data-priority="33"><strong>&lt;tbody&gt;</strong> – Tabelleninhalt</li>
+      <li data-priority="34"><strong>&lt;tfoot&gt;</strong> – Tabellenfuß</li>
+      <li data-priority="35"><strong>&lt;ul&gt;</strong> – Ungeordnete Liste</li>
+      <li data-priority="36"><strong>&lt;ol&gt;</strong> – Geordnete Liste</li>
+      <li data-priority="37"><strong>&lt;li&gt;</strong> – Listenelement</li>
+      <li data-priority="38"><strong>&lt;figure&gt;</strong> – Container für Bild + Beschreibung</li>
+      <li data-priority="39"><strong>&lt;figcaption&gt;</strong> – Bildunterschrift</li>
+      <li data-priority="40"><strong>&lt;audio&gt;</strong> – Audioelement</li>
+      <li data-priority="41"><strong>&lt;video&gt;</strong> – Videoelement</li>
+      <li data-priority="42"><strong>&lt;source&gt;</strong> – Medienquelle für Audio/Video</li>
+      <li data-priority="43"><strong>&lt;track&gt;</strong> – Untertitelspur für Videos</li>
+      <li data-priority="44"><strong>&lt;canvas&gt;</strong> – Zeichenfläche für Grafiken</li>
+      <li data-priority="45"><strong>&lt;svg&gt;</strong> – Vektorgrafik</li>
+      <li data-priority="46"><strong>&lt;iframe&gt;</strong> – Eingebettete Seite</li>
+      <li data-priority="47"><strong>&lt;meta&gt;</strong> – Metadaten im Head</li>
+      <li data-priority="48"><strong>&lt;link&gt;</strong> – Verknüpft CSS oder andere Ressourcen</li>
+      <li data-priority="49"><strong>&lt;script&gt;</strong> – Eingebettetes oder externes JavaScript</li>
+      <li data-priority="50"><strong>&lt;style&gt;</strong> – Eingebettetes CSS</li>
+      <li data-priority="51"><strong>&lt;strong&gt;</strong> – Starker, hervorgehobener Text</li>
+      <li data-priority="52"><strong>&lt;em&gt;</strong> – Betonter Text</li>
+      <li data-priority="53"><strong>&lt;small&gt;</strong> – Kleiner Text</li>
+      <li data-priority="54"><strong>&lt;mark&gt;</strong> – Hervorgehobener Text</li>
+      <li data-priority="55"><strong>&lt;code&gt;</strong> – Quelltext- oder Codeabschnitt</li>
+      <li data-priority="56"><strong>&lt;pre&gt;</strong> – Vorgeformter Text (Zeilenumbrüche bleiben)</li>
+      <li data-priority="57"><strong>&lt;blockquote&gt;</strong> – Zitatblock</li>
+      <li data-priority="58"><strong>&lt;q&gt;</strong> – Kurzes Inline-Zitat</li>
+      <li data-priority="59"><strong>&lt;abbr&gt;</strong> – Abkürzung mit Erklärung</li>
+      <li data-priority="60"><strong>&lt;address&gt;</strong> – Kontaktinformation</li>
+      <li data-priority="61"><strong>&lt;time&gt;</strong> – Zeit- oder Datumsangabe</li>
+      <li data-priority="62"><strong>&lt;progress&gt;</strong> – Fortschrittsanzeige</li>
+      <li data-priority="63"><strong>&lt;meter&gt;</strong> – Messwert innerhalb eines Bereichs</li>
+      <li data-priority="64"><strong>&lt;details&gt;</strong> – Ausklappbarer Informationsblock</li>
+      <li data-priority="65"><strong>&lt;summary&gt;</strong> – Überschrift für ein &lt;details&gt;-Element</li>
+      <li data-priority="66"><strong>&lt;dialog&gt;</strong> – Dialog- oder Pop-up-Fenster</li>
+      <li data-priority="67"><strong>&lt;template&gt;</strong> – Vorlage für wiederverwendbare Inhalte</li>
+      <li data-priority="68"><strong>&lt;slot&gt;</strong> – Platzhalter in Web Components</li>
+      <li data-priority="69"><strong>&lt;noscript&gt;</strong> – Inhalt, falls JavaScript deaktiviert ist</li>
+      <li data-priority="70"><strong>&lt;data&gt;</strong> – Maschinell lesbare Daten</li>
+      <li data-priority="71"><strong>&lt;output&gt;</strong> – Ausgabefeld in Formularen</li>
+      <li data-priority="72"><strong>&lt;base&gt;</strong> – Basis-URL für relative Links</li>
+      <li data-priority="73"><strong>&lt;b&gt;</strong> – Fett, ohne Betonung</li>
+      <li data-priority="74"><strong>&lt;i&gt;</strong> – Kursiv, ohne Betonung</li>
+      <li data-priority="75"><strong>&lt;u&gt;</strong> – Unterstrichener Text</li>
+      <li data-priority="76"><strong>&lt;s&gt;</strong> – Durchgestrichener Text</li>
+      <li data-priority="77"><strong>&lt;sup&gt;</strong> – Hochgestellter Text</li>
+      <li data-priority="78"><strong>&lt;sub&gt;</strong> – Tiefgestellter Text</li>
+      <li data-priority="79"><strong>&lt;cite&gt;</strong> – Zitatquelle</li>
+      <li data-priority="80"><strong>&lt;dfn&gt;</strong> – Definition eines Begriffs</li>
+      <li data-priority="81"><strong>&lt;kbd&gt;</strong> – Tastatureingabe</li>
+      <li data-priority="82"><strong>&lt;var&gt;</strong> – Variable in Code oder Formeln</li>
+      <li data-priority="83"><strong>&lt;del&gt;</strong> – Gelöschter Text</li>
+      <li data-priority="84"><strong>&lt;ins&gt;</strong> – Eingefügter Text</li>
+      <li data-priority="85"><strong>&lt;map&gt;</strong> – Bildkarte für klickbare Bereiche</li>
+      <li data-priority="86"><strong>&lt;area&gt;</strong> – Klickbarer Bereich in einer Bildkarte</li>
+      <li data-priority="87"><strong>&lt;object&gt;</strong> – Eingebettetes Objekt (z. B. PDF)</li>
+      <li data-priority="88"><strong>&lt;param&gt;</strong> – Parameter für &lt;object&gt;</li>
+      <li data-priority="89"><strong>&lt;embed&gt;</strong> – Eingebettete Inhalte (z. B. Medien)</li>
+      <li data-priority="90"><strong>&lt;picture&gt;</strong> – Bild mit mehreren Quellen</li>
+      <li data-priority="91"><strong>&lt;source&gt;</strong> – Quelle für Medien (&lt;audio&gt;, &lt;video&gt;, &lt;picture&gt;)</li>
+      <li data-priority="92"><strong>&lt;track&gt;</strong> – Untertitelspur für Medien</li>
+      <li data-priority="93"><strong>&lt;colgroup&gt;</strong> – Spaltengruppe in Tabellen</li>
+      <li data-priority="94"><strong>&lt;col&gt;</strong> – Definiert Spaltenattribute in Tabellen</li>
+      <li data-priority="95"><strong>&lt;fieldset&gt;</strong> – Gruppiert Formularfelder</li>
+      <li data-priority="96"><strong>&lt;legend&gt;</strong> – Beschriftung für &lt;fieldset&gt;</li>
+      <li data-priority="97"><strong>&lt;optgroup&gt;</strong> – Gruppiert Optionen in einem &lt;select&gt;</li>
+      <li data-priority="98"><strong>&lt;bdi&gt;</strong> – Text mit anderer Schreibrichtung</li>
+      <li data-priority="99"><strong>&lt;bdo&gt;</strong> – Überschreibt Textausrichtung</li>
+      <li data-priority="100"><strong>&lt;wbr&gt;</strong> – Zeilenumbruch-Vorschlag</li>
+    </ul>
+  </div>
+</section>
+      </div></ul>
+    </section>
+  </main>
+<script src="script.js"></script>
+</body>
+</html>

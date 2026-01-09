@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+    text-align: center;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 50px;
+    text-decoration: underline;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+
+.box {
+    background-color: rgb(59, 57, 221);
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.box img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.box p {
+    color: white;
+    font-size: 16px;
+}
+#css-box {
+    filter: grayscale(40%);
+}
+#js-box {
+    filter: grayscale(40%);
+}
+#python-box {
+    filter: grayscale(40%);
+}
+#cpp-box {
+    filter: grayscale(40%);
+}
+#java-box {
+    filter: grayscale(40%);
+}
+#ts-box {
+    filter: grayscale(40%);
+}
